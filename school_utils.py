@@ -18,7 +18,7 @@ def get_schoolkid_by_full_name(full_name):
     except Schoolkid.DoesNotExist:
         print(f"Ученик {full_name} не найден.")
         return None
-    except MultipleObjectsReturned:
+    except Schoolkid.MultipleObjectsReturned:
         print(f"Найдено несколько учеников с именем {full_name}. Уточните запрос.")
         return None
 
